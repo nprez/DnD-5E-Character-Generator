@@ -1,0 +1,13 @@
+1d12
+Abjuration
+Bladesinging
+Chronurgy
+Conjuration
+Divination
+Enchantment
+Evocation
+Graviturgy
+Illusion
+Necromancy
+Transmutation
+War

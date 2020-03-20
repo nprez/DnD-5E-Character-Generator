@@ -1,0 +1,27 @@
+1d26
+Acolyte
+Charlatan
+Clan Crafter
+Cloistered Scholar
+Courtier
+Faction Agent
+Far Traveler
+Folk Hero
+Hermit
+House Agent
+Inheritor
+Knight of the Order
+Mercenary Veteran
+Outlander
+Sage
+Soldier
+Urban Bounty Hunter
+Urchin
+Uthgardt Tribe Member
+Waterdhavian Noble
+City Watch/Investigator
+Criminal/Spy
+Entertainer/Gladiator
+Guild Artisan/Guild Merchant
+Noble/Knight
+Sailor/Pirate

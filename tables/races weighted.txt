@@ -1,0 +1,4 @@
+1d100
+1-30|Human
+31-60|Dwarf/Elf/Halfling
+61-100|Dragonborn/Gnome/Half-Elf/Half-Orc/Tiefling/Other

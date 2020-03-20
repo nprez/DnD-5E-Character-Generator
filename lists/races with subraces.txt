@@ -1,0 +1,13 @@
+Aasimar
+Dragonborn
+Dwarf
+Elf
+Genasi
+Gith
+Gnome
+Half-Elf
+Half-Orc
+Halfling
+Human
+Shifter
+Tiefling

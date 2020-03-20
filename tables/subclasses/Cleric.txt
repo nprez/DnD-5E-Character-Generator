@@ -1,0 +1,13 @@
+1d12
+Arcana Domain
+Death Domain
+Forge Domain
+Grave Domain
+Knowledge Domain
+Life Domain
+Light Domain
+Nature Domain
+Order Domain
+Tempest Domain
+Trickery Domain
+War Domain

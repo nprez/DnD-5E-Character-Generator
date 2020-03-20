@@ -1,0 +1,4 @@
+1d3
+Human
+Variant Human
+Mark of Finding Human/Mark of Handling Human/Mark of Making Human/Mark of Passage Human/Mark of Sentinel Human

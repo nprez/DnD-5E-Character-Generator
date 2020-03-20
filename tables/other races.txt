@@ -1,0 +1,29 @@
+1d28
+Aarakocra
+Aasimar
+Bugbear
+Centaur
+Changeling
+Firbolg
+Genasi
+Gith
+Goblin
+Goliath
+Grung
+Hobgoblin
+Kalashtar
+Kenku
+Kobold
+Lizardfolk
+Locathah
+Loxodon
+Minotaur
+Orc
+Shifter
+Simic Hybrid
+Tabaxi
+Tortle
+Triton
+Vedalken
+Warforged
+Yuan-Ti Pureblood
