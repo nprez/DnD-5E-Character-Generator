@@ -111,7 +111,7 @@ def statToModifier(s):
 def getPrioritizedStats(className):
 	unprioritizedStats = [statRoll(), statRoll(), statRoll(), statRoll(), statRoll(), statRoll()]
 	unprioritizedStats.sort(reverse=True)
-	statPriorities = [line.rstrip('\n\r') for line in open('stat priorities/'+className+'.txt')]
+	statPriorities = getFileLines('stat priorities/'+className+'.txt')
 	prioritizedStats = [None, None, None, None, None, None]
 	for priority in statPriorities:
 		decisions = priority.split('?')
