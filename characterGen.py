@@ -1,11 +1,34 @@
-import random
 import json
+import os
+import random
 
-#Load settings
+settingsPath = 'lists/settings.json'
+supportedSettings = {'WeightedRaces':'boolean'}
 settings = {}
-with open('lists/settings.json', 'r') as settingsFile:
-  settings = json.load(settingsFile)
-print 'Settings: ' + json.dumps(settings, sort_keys=True, indent=4)
+
+def loadSettings():
+	if not os.path.exists(settingsPath):
+		with open(settingsPath, 'w+') as settingsFile:
+			settingsFile.write('{\n\t\n}')
+	with open(settingsPath, 'r') as settingsFile:
+		tempJSON = json.load(settingsFile)
+		for key in tempJSON.keys():
+			settings[key] = tempJSON[key]
+	for setting in supportedSettings.keys():
+		if setting not in settings.keys():
+			setDefaultSetting(setting, supportedSettings[setting])
+	print 'Settings: ' + json.dumps(settings, sort_keys=True, indent=4)
+
+def setDefaultSetting(s, sType):
+	defaultValue = {'string': '', 'boolean': False, 'number': 0}[sType]
+	settings[s] = defaultValue
+	with open(settingsPath, 'w+') as settingsFile:
+		json.dump(settings, settingsFile, sort_keys=True, indent=4)
+
+def setting(s):
+	if(s not in settings.keys()):
+		setDefaultSetting(s, supportedSettings[s])
+	return settings[s]
 
 def getFileLines(file):
 	return [line.rstrip('\n\r') for line in open(file, 'r')]
@@ -128,6 +151,8 @@ def getPrioritizedStats(className):
 				prioritizedStats[number] = unprioritizedStats.pop(0)
 	return prioritizedStats
 
+loadSettings()
+
 #map ability score to position in stat array
 statToNumber = {'STR':0,'DEX':1,'CON':2,'INT':3,'WIS':4,'CHA':5}
 
@@ -137,7 +162,7 @@ subClass = Table('subclasses/'+playerClass).roll()
 #Get stats
 playerStats = getPrioritizedStats(playerClass)
 #Get race and subrace
-if settings['WeightedRaces']:
+if setting('WeightedRaces'):
 	race = Table('races weighted').roll()
 else:
 	race = Table('race').roll()
