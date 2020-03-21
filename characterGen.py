@@ -1,10 +1,14 @@
 import random
+import json
 
-#Settings
-weightedRaces = True
+#Load settings
+settings = {}
+with open('lists/settings.json', 'r') as settingsFile:
+  settings = json.load(settingsFile)
+print 'Settings: ' + json.dumps(settings, sort_keys=True, indent=4)
 
 def getFileLines(file):
-	return [line.rstrip('\n\r') for line in open(file)]
+	return [line.rstrip('\n\r') for line in open(file, 'r')]
 
 #load list from file
 def getList(file):
@@ -133,7 +137,7 @@ subClass = Table('subclasses/'+playerClass).roll()
 #Get stats
 playerStats = getPrioritizedStats(playerClass)
 #Get race and subrace
-if weightedRaces:
+if settings['WeightedRaces']:
 	race = Table('races weighted').roll()
 else:
 	race = Table('race').roll()
