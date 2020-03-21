@@ -141,6 +141,10 @@ if race == "Other":
 	race = Table('other races').roll()
 if race in getList('races with subraces'):
 	race = Table('subraces/'+race).roll()
+if race in ['Tiefling', 'Feral Tiefling']:
+	variant = Table('subraces/Tiefling SCAG Variants').roll()
+	if variant != '':
+		race = variant + ' ' + race
 #Get alignment
 alignment = Table('alignment').roll()
 #Get gender

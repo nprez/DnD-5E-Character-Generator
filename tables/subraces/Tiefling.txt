@@ -1,5 +1,6 @@
-1d9
-Asmodeus Tiefling
+1d10
+Tiefling
+Feral Tiefling
 Baalzebul Tiefling
 Dispater Tiefling
 Fierna Tiefling
