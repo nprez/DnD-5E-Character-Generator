@@ -17,13 +17,13 @@ def loadSettings():
 	for setting in supportedSettings.keys():
 		if setting not in settings.keys():
 			setDefaultSetting(setting, supportedSettings[setting])
-	print 'Settings: ' + json.dumps(settings, sort_keys=True, indent=4)
+	print 'Settings: ' + json.dumps(settings, sort_keys=True, indent=2)
 
 def setDefaultSetting(s, sType):
 	defaultValue = {'string': '', 'boolean': False, 'number': 0}[sType]
 	settings[s] = defaultValue
 	with open(settingsPath, 'w+') as settingsFile:
-		json.dump(settings, settingsFile, sort_keys=True, indent=4)
+		json.dump(settings, settingsFile, sort_keys=True, indent=2)
 
 def setting(s):
 	if(s not in settings.keys()):
