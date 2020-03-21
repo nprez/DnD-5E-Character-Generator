@@ -1,5 +1,4 @@
-1d10
-Tiefling
+1d9
 Asmodeus Tiefling
 Baalzebul Tiefling
 Dispater Tiefling
